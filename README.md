@@ -51,6 +51,21 @@ Three editing modes:
 - **Quick tighten** — mechanical rules + banned-word list + 10% cut
 - **Voice check** — flags slop and comfort language without rewriting
 
+## Using with other LLMs
+
+The skill's content is model-agnostic. `writing-voice-custom/SKILL.md` is plain Markdown craft rules. Only the automatic `/writing-voice-custom` invocation is specific to Claude Code, Cursor, and other agents that follow the Agent Skills spec.
+
+Any other LLM (ChatGPT, Gemini, local models, a raw API call) can use it as a prompt:
+
+- Paste the full contents of `writing-voice-custom/SKILL.md` into the chat, or set it as a custom/system prompt.
+- Then ask for an edit:
+
+```
+Edit this draft using these rules: <paste draft>
+```
+
+Editing quality depends on the model's own writing ability, not on anything Claude-specific.
+
 ## License
 
 MIT. Use it, fork it, sharpen it.
