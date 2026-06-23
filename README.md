@@ -4,7 +4,7 @@ A craft-first prose editing and writing skill for AI coding agents (Claude Code,
 
 It enforces clear, honest, muscular prose through three layers:
 
-1. **On Writing fundamentals** — the mechanics (10% rule, active voice, no adverbs, kill qualifiers/hedges, simple words)
+1. **Fundamentals** — the mechanics (10% rule, active voice, no adverbs, kill qualifiers/hedges, simple words)
 2. **Anti-Slop Protocol** — the immune system that strips AI tells (filler phrases, false-depth markers, hollow intensifiers, structural slop)
 3. **Editorial Voice** — the spine (say the actual thing, no comfort language, earn every abstraction, no overclaiming, take a position)
 
