@@ -24,15 +24,11 @@ This is not a style guide. It is a set of non-negotiable craft standards for cle
 
 ## Layer 1: On Writing Fundamentals
 
-These are craft rules, not preferences. Apply all of them on every pass.
+Apply these editorial preferences where they improve the requested piece. Preserve meaning, factual scope and the requested mode.
 
-### The 10% Rule
+### Cut only what improves the piece
 
-**2nd draft = 1st draft minus 10%.**
-
-This is structural discipline, not optional trimming. If the first draft is 1,000 words, the second draft ceiling is 900. The cut material is almost always filler, repetition, throat-clearing, or over-explanation.
-
-**How to apply:** Count words. Multiply by 0.9. That is the ceiling. Cut until you hit it. If the draft is already tight, the rule still applies — it forces you to find the fat you were blind to.
+Remove repetition, filler and unnecessary explanation. Preserve facts, meaning, voice and qualifications supported by the evidence. An already-tight draft may need little or no change. A numerical reduction target applies only when the user requests one; flag a conflict with meaning rather than silently cutting substance.
 
 ### Active Voice
 
@@ -43,7 +39,7 @@ Passive voice is the mark of a timid writer. It adds words, removes agency, and 
 
 **Detection:** Search for "was," "were," "been," "being," "by" constructions. Rewrite with the subject performing the action. The only acceptable passive is when the actor is genuinely unknown or irrelevant.
 
-### No Adverbs
+### Prefer precise verbs
 
 The adverb is not your friend. It signals that the verb was lazy.
 
@@ -51,15 +47,15 @@ The adverb is not your friend. It signals that the verb was lazy.
 - **Kill:** "She said softly" → "She whispered"
 - **Kill:** "He shouted loudly" → just "He shouted" (loudly is already implied)
 
-**Detection:** Flag every word ending in "-ly." For each one: (a) delete it if the meaning is already clear, or (b) replace verb+adverb with a single stronger verb. Dialogue attribution adverbs are the worst offenders — if the dialogue needs an adverb to land, the dialogue is weak. Fix the dialogue.
+Check whether an adverb adds useful meaning. Remove redundancy or prefer a precise verb; retain meaningful modifiers, especially in technical and factual statements.
 
 ### Kill Qualifiers and Hedges
 
 These words almost never earn their place:
 
-**Qualifiers (delete on sight):** very, really, quite, rather, somewhat, a little, sort of, kind of, basically, actually, just, pretty (as intensifier), fairly, slightly
+**Qualifiers (check for padding; preserve meaningful degrees):** very, really, quite, rather, somewhat, a little, sort of, kind of, basically, actually, just, pretty (as intensifier), fairly, slightly
 
-**Hedging language (state things directly):** "I think," "it seems," "perhaps," "it could be argued," "one might say," "in many ways," "to some extent," "it's worth noting that"
+**Hedging language (remove empty hesitation; preserve warranted uncertainty):** "I think," "it seems," "perhaps," "it could be argued," "one might say," "in many ways," "to some extent," "it's worth noting that"
 
 **Redundancies (collapse):** "past history" → "history," "future plans" → "plans," "end result" → "result," "completely finished" → "finished," "in order to" → "to"
 
@@ -294,7 +290,7 @@ When the user shares a draft for editing:
    - Ensure the piece takes a position
    - Verify it sounds natural read aloud
 
-7. **10% cut.** Count words. If the edit hasn't already cut 10%, find more to remove.
+7. **Restraint check.** Confirm that cuts improve the piece and preserve its meaning. Leave already-effective prose intact.
 
 8. **Deliver the edit** with a brief note on what changed and why. Don't explain obvious fixes. Focus on the structural or voice-level changes that the writer should understand for future drafts.
 
@@ -304,7 +300,7 @@ When the user says "just tighten this" or "quick pass":
 
 1. Apply Layer 1 mechanical rules (passive voice, adverbs, qualifiers, word simplification)
 2. Run the anti-slop banned word list
-3. Cut 10%
+3. Remove only unnecessary words; apply a numerical target only if requested
 4. Return the tightened version with minimal commentary
 
 ### Mode 3: Voice Check
@@ -317,7 +313,7 @@ When the user asks "does this sound right?" or "check the voice":
 4. Note anything that fails the read-aloud test
 5. Don't rewrite — flag issues and let the writer fix them
 
-### Mode 3: Ghostwrite
+### Mode 4: Ghostwrite
 
 When writing from scratch on the user's behalf:
 
@@ -333,11 +329,11 @@ When writing from scratch on the user's behalf:
 
 Use this as a final-pass checklist on any piece:
 
-- [ ] 10% shorter than the input
+- [ ] Cuts improve the piece; any requested length target preserves meaning
 - [ ] No passive voice (unless actor genuinely unknown)
-- [ ] No adverbs (especially in dialogue attribution)
-- [ ] No qualifiers: very, really, quite, rather, somewhat, just, actually, basically
-- [ ] No hedges: "I think," "it seems," "perhaps," "it could be argued"
+- [ ] Modifiers earn their place; no mechanical word filtering
+- [ ] No empty qualifiers; meaningful degree is preserved
+- [ ] No empty hesitation; warranted uncertainty is preserved
 - [ ] No throat-clearing openers
 - [ ] No banned slop words or phrases
 - [ ] No structural slop (false binaries, empty frameworks, hedge sandwiches)
@@ -357,4 +353,5 @@ Use this as a final-pass checklist on any piece:
 - This is a custom skill, protected from Dex updates
 - Edit `.claude/skills/writing-voice-custom/SKILL.md` to modify
 - Works standalone or combined with other skills (e.g., `/anthropic-doc-coauthoring` for structure, then `/writing-voice-custom` for voice)
-- The Anti-Slop Protocol applies to ALL prose output, not just when this skill is explicitly invoked — internalize it
+- This skill applies to the requested writing/editing task. It does not impose its workflow on unrelated responses.
+- Before changing these rules, use `eval.md`; preserve the already-tight and legitimate-word controls.
