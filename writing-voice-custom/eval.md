@@ -27,10 +27,10 @@ A piece can read beautifully and still fail the eval. The eval measures whether 
 Each dimension is scored PASS/FAIL on the skill's output. No partial credit. A dimension fails if a single clear violation survives.
 
 ### Layer 1 — Fundamentals
-- **L1.1 Length** — Output is ≤90% of input word count (Full Edit / Quick Tighten). Count and show the math.
+- **L1.1 Economy** — Cuts remove unnecessary material without damaging effective prose. A numeric reduction is required only when the user requested one; preserve meaning first.
 - **L1.2 Active voice** — No passive constructions survive except where the actor is genuinely unknown.
 - **L1.3 Adverbs** — No `-ly` adverbs survive that could be cut or folded into a stronger verb. Dialogue attribution adverbs are an automatic fail.
-- **L1.4 Qualifiers/hedges** — No `very, really, quite, just, actually, basically`; no `I think, it seems, perhaps, it could be argued`.
+- **L1.4 Qualifiers/hedges** — No empty padding or hesitation. Preserve degrees and uncertainty that the evidence or meaning requires.
 - **L1.5 Simple words** — No `utilize, facilitate, commence, demonstrate` where the plain word fits.
 - **L1.6 Paragraph discipline** — No paragraph over 5–6 sentences without a structural reason. Each does one job.
 
@@ -50,7 +50,7 @@ Each dimension is scored PASS/FAIL on the skill's output. No partial credit. A d
 - **L3.6 Reads aloud** — No sentence that a smart person would never say out loud.
 
 ### Process integrity
-- **P.1 No meaning lost** — The edit preserves the author's argument and facts. Cutting 10% must not cut the point. This is the one dimension that outranks all others: an edit that tightens prose but changes or guts the meaning is a FAIL regardless of every other PASS.
+- **P.1 No meaning lost** — The edit preserves the author's argument and facts. A length target must not cut the point. This is the one dimension that outranks all others: an edit that tightens prose but changes or guts the meaning is a FAIL regardless of every other PASS.
 - **P.2 Right mode** — The output matches the requested mode (Voice Check flags without rewriting; Quick Tighten stays mechanical and brief).
 - **P.3 Honest commentary** — Change notes name real structural/voice changes, not obvious mechanical fixes, and don't overclaim what the edit did.
 
@@ -75,7 +75,7 @@ SCORE: 22/25 dimensions  +  3/4 expected catches
 VERDICT: FAIL (L1.3, L2.5, one missed catch)
 ```
 
-A run is a PASS only if every rubric dimension passes **and** every expected catch is caught.
+A run is a PASS only if every applicable rubric dimension passes **and** every expected catch is caught. Missing output or unperformed grading is UNVERIFIED, never PASS. Record model, harness, instruction revision, input/output artifact, reviewer and evidence with the scorecard. The tested agent cannot serve as its own independent judge.
 
 ---
 
@@ -126,6 +126,16 @@ Each case is a small input engineered to trip a specific rule. The **Expected Ca
 > Cases C7 and C8 matter as much as the violation cases. A skill that only ever cuts is a blunt instrument. The eval has to prove restraint, not just aggression.
 
 ---
+
+### C9 — Warranted uncertainty
+> "The result may reflect selection bias; the sample is too small to decide."
+
+**Expected catches:** none. Preserve the uncertainty and limitation. Turning this into a definite causal claim fails P.1 and L3.4.
+
+### C10 — Requested mode
+> User: "Check the voice; do not rewrite." Draft: "We are leveraging our ecosystem to drive outcomes."
+
+**Expected catches:** name vague phrasing and missing specifics. Give observations without a replacement draft. Rewriting fails P.2.
 
 ## Self-Learning Loop
 
