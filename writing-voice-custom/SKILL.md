@@ -41,7 +41,7 @@ Passive voice is the mark of a timid writer. It adds words, removes agency, and 
 
 ### Prefer precise verbs
 
-The adverb is not your friend. It signals that the verb was lazy.
+Prefer a precise verb when a modifier merely compensates for a vague one. Keep modifiers that carry meaning.
 
 - **Kill:** "He ran quickly" → "He sprinted"
 - **Kill:** "She said softly" → "She whispered"
@@ -274,7 +274,7 @@ When the user shares a draft for editing:
 
 4. **Line edit.** Apply all Layer 1 rules:
    - Convert passive to active
-   - Kill adverbs, qualifiers, hedges
+   - Remove empty modifiers and hesitation; preserve meaningful degree and uncertainty
    - Simplify vocabulary
    - Tighten paragraphs
    - Cut backstory and over-explanation
@@ -298,7 +298,7 @@ When the user shares a draft for editing:
 
 When the user says "just tighten this" or "quick pass":
 
-1. Apply Layer 1 mechanical rules (passive voice, adverbs, qualifiers, word simplification)
+1. Apply the relevant Layer 1 guidance with meaning-preserving judgment
 2. Run the anti-slop banned word list
 3. Remove only unnecessary words; apply a numerical target only if requested
 4. Return the tightened version with minimal commentary
@@ -340,7 +340,7 @@ Use this as a final-pass checklist on any piece:
 - [ ] No comfort language or unearned abstractions
 - [ ] No overclaiming (claims scaled to evidence, not feelings)
 - [ ] Every paragraph does one job
-- [ ] Piece takes a clear position
+- [ ] An argumentative piece takes a supported position; factual or explanatory writing serves its stated purpose
 - [ ] Opening earns attention in first two sentences
 - [ ] Ending lands on the strongest point
 - [ ] Sounds natural read aloud
