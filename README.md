@@ -1,71 +1,39 @@
 # Writing Voice
 
-A craft-first prose editing and writing skill for AI coding agents (Claude Code, Cursor, etc.).
+Write and edit plain, natural prose while checking whether the argument has substance. The skill follows Orwell's writing principles with judgment: preserve meaning, use familiar words, remove filler, and choose a form that fits the piece. It discourages stock AI phrasing, faux-sassy hooks, decorative triads, and needless fragments.
 
-It enforces clear, honest, muscular prose through three layers:
+Version 2.0 replaces forced 10% cuts and blanket word bans with contextual editing. It keeps meaningful uncertainty, useful technical terms, and already-effective prose.
 
-1. **Fundamentals** — the mechanics (10% rule, active voice, no adverbs, kill qualifiers/hedges, simple words)
-2. **Anti-Slop Protocol** — the immune system that strips AI tells (filler phrases, false-depth markers, hollow intensifiers, structural slop)
-3. **Editorial Voice** — the spine (say the actual thing, no comfort language, earn every abstraction, no overclaiming, take a position)
+Version 2.0 is currently on the draft branch `codex/evidence-based-editing` in PR #2. The commands below install that version while review remains open.
 
-## What it does
+## Install locally
 
-Use it to:
-- Edit, tighten, or sharpen any draft
-- Review AI-generated text before it ships
-- Ghostwrite blog posts, newsletters, memos, or long-form content
-- Run a quick voice check on something you wrote
-
-## Install
-
-The skill is a single `SKILL.md` inside a `writing-voice-custom/` folder. Drop that folder into your agent's skills directory.
-
-**Claude Code**
-
-```bash
-git clone https://github.com/tompulsarlabs/writing-voice-skill.git
-cp -r writing-voice-skill/writing-voice-custom ~/.claude/skills/
+```sh
+git clone --branch codex/evidence-based-editing https://github.com/tompulsarlabs/writing-voice-skill.git
+cd writing-voice-skill
+python3 scripts/install.py --user
+python3 scripts/install.py --user --check
 ```
 
-**Cursor**
+The installer maintains one copy in `~/.agents/skills/writing-voice-custom/` and links the Codex compatibility path, Claude Code, and Cursor to it. It refuses conflicting independent installations instead of replacing them. Repeat the install after pulling an update. Start a new session if the host does not discover the new skill automatically.
 
-```bash
-git clone https://github.com/tompulsarlabs/writing-voice-skill.git
-cp -r writing-voice-skill/writing-voice-custom ~/.cursor/skills/
-```
+Invoke `$writing-voice-custom` in Codex or `/writing-voice-custom` in Claude Code, or ask for a prose edit and let the host select it. Supported work: full edit, quick tighten, voice check, and writing from scratch.
 
-(Or copy into a project-local `.claude/skills/` or `.cursor/skills/` directory if you only want it in one project.)
+## Cloud and other machines
 
-## Use
+A local installation does not itself upload the skill to an account or another machine.
 
-Invoke it by name or just ask for an edit:
+- **Claude, Cowork, and Claude Code cloud:** Create or update the skill in [Customize > Skills](https://claude.ai/customize/skills), using the name and description from the frontmatter and the body of `writing-voice-custom/SKILL.md`. Alternatively upload a ZIP containing `writing-voice-custom/`. Enable it for the account. Claude's [cloud skill documentation](https://code.claude.com/docs/en/skills#skills-in-cowork-and-cloud-sessions) describes account sync and project discovery.
+- **ChatGPT Work cloud:** Create or update it in the account's [Skills editor](https://chatgpt.com/skills), using the same name, description, and body. Save the skill and verify its enabled state. Availability depends on the account's supported surfaces; test selection in a new session.
+- **Repository-based cloud sessions and fresh clones:** Run `python3 scripts/install.py --project /path/to/repo`, then commit the generated `.agents/skills/writing-voice-custom/` and the relative links under `.claude/skills/` and `.cursor/skills/`. Codex reads `.agents/skills`; Claude reads `.claude/skills`. The links stay within the repository and need no local home directory. A source repository on GitHub alone does not install the skill into every other repository.
+- **Other Agent Skills hosts or raw API clients:** Install the folder in the host's supported location, or provide its contents as writing guidance in the request. An API client must explicitly load it; there is no universal cross-vendor sync.
 
-```
-/writing-voice-custom
+Cloud editor copies need updating when the source changes. Keep `writing-voice-custom/` authoritative and compare the saved body when updating an account copy. This skill requires no scripts, network access, or connectors for ordinary writing; the evaluation reference is for maintenance only.
 
-clean this up: <paste draft>
-```
+## Evaluation and maintenance
 
-Three editing modes:
-- **Full edit** (default) — structural pass, line edit, anti-slop sweep, voice pass, 10% cut
-- **Quick tighten** — mechanical rules + banned-word list + 10% cut
-- **Voice check** — flags slop and comfort language without rewriting
-
-## Using with other LLMs
-
-The skill's content is model-agnostic. `writing-voice-custom/SKILL.md` is plain Markdown craft rules. Only the automatic `/writing-voice-custom` invocation is specific to Claude Code, Cursor, and other agents that follow the Agent Skills spec.
-
-Any other LLM (ChatGPT, Gemini, local models, a raw API call) can use it as a prompt:
-
-- Paste the full contents of `writing-voice-custom/SKILL.md` into the chat, or set it as a custom/system prompt.
-- Then ask for an edit:
-
-```
-Edit this draft using these rules: <paste draft>
-```
-
-Editing quality depends on the model's own writing ability, not on anything Claude-specific.
+`writing-voice-custom/eval.md` contains the rubric and 17 cases. Save actual model inputs and outputs when running it, and score the observed results. Installer and frontmatter checks do not measure writing quality. Current deployment and verification evidence belongs in `HANDOFF.md`.
 
 ## License
 
-MIT. Use it, fork it, sharpen it.
+MIT.
