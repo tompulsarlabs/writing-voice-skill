@@ -4,12 +4,12 @@ Write and edit plain, natural prose while checking whether the argument has subs
 
 Version 2.0 replaces forced 10% cuts and blanket word bans with contextual editing. It keeps meaningful uncertainty, useful technical terms, and already-effective prose.
 
-Version 2.0 is currently on the draft branch `codex/evidence-based-editing` in PR #2. The commands below install that version while review remains open.
+Version 2.0 is available on `main`. The commands below install the current version.
 
 ## Install locally
 
 ```sh
-git clone --branch codex/evidence-based-editing https://github.com/tompulsarlabs/writing-voice-skill.git
+git clone https://github.com/tompulsarlabs/writing-voice-skill.git
 cd writing-voice-skill
 python3 scripts/install.py --user
 python3 scripts/install.py --user --check

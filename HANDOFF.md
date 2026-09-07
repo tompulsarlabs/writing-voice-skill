@@ -1,6 +1,6 @@
 # Writing Voice status
 
-Updated 2026-09-06. Version 2.0.0 remains on `codex/evidence-based-editing` in draft PR #2; `main` has not been merged or rewritten.
+Updated 2026-09-07. Version 2.0.0 is merged into `main` through PR #2, following the user’s explicit merge authorization. Merge commit: `2ec1791a46403b7fb812bcaabd1aac955b050cef`. The source branch is retained because installed account copies link to its evaluation reference; those links remain valid.
 
 The skill now applies plain language and Orwell's rules with judgment. It checks substance as well as phrasing, avoids decorative triads and influencer cadence, preserves useful punctuation and rhythm, and chooses a form for the requested piece. Mandatory cuts, blanket modifier bans, and a universal demand to take a position have been removed. The source comparison and scope instructions protect uncertainty, attribution, conditions, quotations, and constrained edits.
 
@@ -12,4 +12,4 @@ Account copies were saved through the Claude and ChatGPT skill editors. Claude's
 
 No fresh model-quality evaluation or cloud task execution was performed for version 2.0.0. Earlier smoke evidence described in PR #2 applies to its earlier instruction revision, not this version. Installation and content verification are not evidence of improved model quality.
 
-Next review work: run the cases against the desired models with captured outputs and independent grading; keep this separate from installation checks. No broader changes to operational agents or other project repositories were made.
+Remaining evaluation work: run the cases against the desired models with captured outputs and independent grading; keep this separate from installation checks. No broader changes to operational agents or other project repositories were made.
