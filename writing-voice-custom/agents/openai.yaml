@@ -1,0 +1,6 @@
+interface:
+  display_name: "Writing Voice"
+  short_description: "Plain prose, sound arguments, and natural rhythm"
+  default_prompt: "Use $writing-voice-custom to edit this draft for substance and clarity."
+policy:
+  allow_implicit_invocation: true
